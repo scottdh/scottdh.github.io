@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Visibility</title>
+
+    <style type="text/css">
+      body {
+        margin: 1em auto;
+        max-width: 40em;
+        width: 88%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      }
+
+      label {
+        display: block;
+        width: 100%;
+      }
+
+      input {
+        margin-bottom: 1em;
+        font-size: 1em;
+      }
+
+      [type="checkbox"] {
+        margin-bottom: 0;
+        margin-right: 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Password Visibility</h1>
+
+    <p>Enter your username and password to login.</p>
+
+    <form>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <div>
+        <label for="show-password">
+          <input type="checkbox" name="show-passwords" id="show-password" />
+          Show password
+        </label>
+      </div>
+
+      <p>
+        <button type="submit">Log In</button>
+      </p>
+    </form>
+
+    <script>
+      const showPasswordCheckbox = document.querySelector("#show-password");
+      const passwordField = document.querySelector("#password");
+
+      showPasswordCheckbox.addEventListener(
+        "change",
+        function(event) {
+          passwordField.type === "password"
+            ? (passwordField.type = "text")
+            : (passwordField.type = "password");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
