@@ -1,0 +1,41 @@
+.mainContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  border-top: 8px solid black;
+  padding-left: 16px;
+  padding-top: 8px;
+  font-family: sans-serif;
+}
+
+header div:first-child {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#subject {
+  text-transform: uppercase;
+  align-self: center;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 2em;
+}
+
+#inThisSection {
+  border-left: 4px solid gold;
+}
+
+#inThisSection ul {
+  list-style: none;
+  line-height: 1.5em;
+}
+
+#inThisSection ul li:first-child {
+  text-transform: uppercase;
+}
+
+#inThisSection ul li:first-child {
+  text-transform: uppercase;
+}
