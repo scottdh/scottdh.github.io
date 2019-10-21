@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Count</title>
+
+    <style type="text/css">
+      body {
+        margin: 1em auto;
+        max-width: 40em;
+        width: 88%;
+      }
+
+      label {
+        display: block;
+        width: 100%;
+      }
+
+      textarea {
+        min-height: 24em;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Character Count</h1>
+
+    <label for="text">Enter your text below.</label>
+    <textarea id="text"></textarea>
+
+    <p>
+      You've written
+      <strong><span id="character-count">0</span> characters</strong> and
+      <strong><span id="word-count">0</span> word(s)</strong>.
+    </p>
+
+    <script>
+      const textArea = document.querySelector("#text");
+      const charCounter = document.querySelector("#character-count");
+      const wordCounter = document.querySelector("#word-count");
+
+      textArea.addEventListener("input", event => {
+        let currentLength = textArea.value.length;
+        let numberOfWords = textArea.value.split(" ");
+        charCounter.textContent = currentLength;
+        wordCounter.textContent = numberOfWords.length - 1;
+      });
+    </script>
+  </body>
+</html>
