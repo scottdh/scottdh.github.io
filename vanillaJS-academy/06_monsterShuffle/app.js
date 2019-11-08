@@ -84,7 +84,7 @@ var shuffle = function(array) {
   return array;
 };
 
-// shuffle(monsters);
+shuffle(monsters);
 
 var renderShuffledMonsters = monsters
   .map(function(monster, index) {
