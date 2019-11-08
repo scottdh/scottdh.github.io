@@ -1,0 +1,31 @@
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  width: 88%;
+}
+/**
+ * A simple grid layout
+ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+.cell {
+  min-height: 6em;
+  padding: 1em;
+}
+/**
+ * Make sure images scale
+ */
+img {
+  height: auto;
+  max-width: 100%;
+}
+/**
+ * Style buttons to not look like buttons
+ */
+[data-monsterID] {
+  background-color: transparent;
+  border: 0;
+}
