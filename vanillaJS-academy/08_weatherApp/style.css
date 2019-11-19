@@ -30,9 +30,11 @@ img {
 
 #additionalInfo {
   margin: 2em auto 2em auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+}
+
+#additionalInfo div {
+  width: 100%;
 }
 
 #additionalInfo img {
