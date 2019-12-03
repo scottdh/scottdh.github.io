@@ -1,0 +1,21 @@
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  width: 88%;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin-bottom: 1em;
+}
+
+textarea {
+  height: 8em;
+}

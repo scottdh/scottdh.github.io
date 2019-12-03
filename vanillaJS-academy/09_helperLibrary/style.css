@@ -1,0 +1,15 @@
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  width: 88%;
+}
+
+.btn-blue {
+  background-color: #0088cc;
+  color: #ffffff;
+}
+
+.btn-purple {
+  background-color: rebeccapurple;
+  color: #ffffff;
+}
