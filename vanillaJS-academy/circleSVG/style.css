@@ -1,0 +1,41 @@
+root {
+  --main-bg-color: brown;
+  --wt: #fff;
+  --blu: midnightblue;
+  --pink: lightpink;
+  --dpink: salmon;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  background: var(--blu);
+  color: var(--wt);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.65em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--wt);
+  margin: 2.5em auto 2em;
+}
+
+.timer {
+  max-width: 70vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.25fr 1fr 1fr 1fr;
+}

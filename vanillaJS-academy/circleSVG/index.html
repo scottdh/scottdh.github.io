@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Timer</h1>
+
+    <div class="timer">
+      <div id="total">
+        <p>2:00</p>
+      </div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 74 74">
+          <circle class="dash-bk" r="34.44" cy="41" cx="41" stroke-width="5" />
+          <circle
+            id="circle"
+            class="circle_animation"
+            r="34.44"
+            cy="41"
+            cx="41"
+            stroke-width="5"
+          />
+          <circle
+            class="dash"
+            r="34.44"
+            cy="41"
+            cx="41"
+            stroke-width="6"
+            stroke-dasharray="1 .833333333333333"
+            stroke="midnightblue"
+          />
+        </svg>
+      </div>
+      <div id="app"></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

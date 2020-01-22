@@ -22,8 +22,14 @@ ul.todos li {
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid lightgray;
+  display: flex;
 }
-ul.todos .todo-done {
+
+ul.todos li div {
+  flex-shrink: 0;
+}
+
+ul.todos .todo-done label {
   text-decoration: line-through;
   text-decoration-thickness: 0.1em;
   color: darkgray;
@@ -32,4 +38,16 @@ ul.todos .todo-done {
 ul.todos {
   list-style: none;
   padding-left: 0;
+}
+
+button {
+  margin: 0 0 0 8px;
+  padding: 4px 8px 4px 8px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+}
+
+.destructive {
+  background-color: darkred;
+  color: white;
 }
