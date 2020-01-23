@@ -43,8 +43,6 @@ var app = new Reef("#app", {
           todoHTML +=
             "<input type='checkbox' id='todo-" +
             index +
-            " 'data-listIndex='" +
-            index +
             "'" +
             (todo.done ? "checked" : "") +
             ">";
@@ -60,20 +58,10 @@ var app = new Reef("#app", {
             if (todo.confirmDelete) {
               // Show the cancel and confirm delete buttons
               todoHTML +=
-                "<div>Sure? No takey-backsies! <button data-action='cancelDelete'data-listIndex='" +
-                index +
-                "'>Cancel</button><button class='destructive' data-action='confirmDelete' data-listIndex='" +
-                index +
-                "'>Confirm</button></div>";
+                "<div>Sure? <button data-action='cancelDelete'>Cancel</button><button class='destructive' data-action='confirmDelete' >Yup, delete</button></div>";
             } else {
               // show the delete button
-              todoHTML +=
-                "<button " +
-                " data-action='delete'" +
-                " data-listIndex='" +
-                index +
-                "'" +
-                ">Delete</button>";
+              todoHTML += "<button data-action='delete'>Delete</button>";
             }
           }
 
