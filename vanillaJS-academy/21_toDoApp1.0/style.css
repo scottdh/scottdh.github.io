@@ -1,0 +1,80 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 1em auto;
+  max-width: 40em;
+  width: 92%;
+  font-size: 16px;
+}
+form {
+  margin-bottom: 2em;
+}
+label {
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  font-size: 1em;
+}
+[type="checkbox"] {
+  margin-right: 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+ul.todos li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+}
+
+ol.lists {
+  padding-left: 0;
+}
+ol.lists li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+}
+
+ul.todos li div {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+ol.lists li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.todos .todo-done label {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1em;
+  color: darkgray;
+}
+
+ul.todos {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  margin: 0 0 0 8px;
+  padding: 4px 8px 4px 8px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.destructive {
+  background-color: darkred;
+  color: white;
+}
