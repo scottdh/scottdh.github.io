@@ -241,7 +241,6 @@ var addTodo = function(event) {
 
   list.todos.push({ item: field.value, done: false });
 
-  // sortList(items);
   app.setData({ lists: data.lists });
 
   // Clear the field and return focus
@@ -284,7 +283,7 @@ var clickHandler = function(event) {
     var data = app.getData();
     var currentTodo = data.lists[data.current]["todos"][getListIndex(event)];
     currentTodo.done = currentTodo.done === false ? true : false;
-    // sortList(listItemsCopy);
+    sortList(data.lists[data.current]["todos"]);
     app.setData({ lists: data.lists });
     return;
   }
