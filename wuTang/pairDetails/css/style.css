@@ -357,6 +357,7 @@ body {
   min-width: 100px;
   height: 200px;
   border: 1px lightgray solid;
+  border-radius: 4px;
   margin: -156px 16px 24px 16px; }
   .bookmark .bookmarkInfo {
     display: flex; }
@@ -440,3 +441,10 @@ nav {
     .compareStats div p {
       margin: 0;
       font-weight: bold; }
+
+.compareStats.stacked {
+  padding: 8px 24px; }
+  .compareStats.stacked div {
+    flex-direction: column; }
+    .compareStats.stacked div p {
+      font-size: 1.5rem; }
