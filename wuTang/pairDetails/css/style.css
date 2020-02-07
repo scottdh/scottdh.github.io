@@ -340,7 +340,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
-    line-height: 1.5rem; }
+    line-height: 1.5rem;
+    transition-duration: 400ms; }
   @media (min-width: 940px) {
     .header h4 {
       font-size: 1em; }
@@ -447,4 +448,44 @@ nav {
   .compareStats.stacked div {
     flex-direction: column; }
     .compareStats.stacked div p {
-      font-size: 1.5rem; }
+      font-size: 19px; }
+
+.box {
+  margin-right: 8px; }
+
+.additionalInfo.right {
+  text-align: left;
+  padding-right: 50%;
+  align-items: flex-start; }
+  .additionalInfo.right .box {
+    margin: 0; }
+    .additionalInfo.right .box:nth-child(3) {
+      font-weight: bold; }
+    .additionalInfo.right .box:nth-child(4) {
+      font-weight: bold; }
+
+.additionalInfo.left {
+  padding-left: 50%;
+  align-items: flex-end;
+  text-align: right; }
+  .additionalInfo.left .box {
+    margin: 0; }
+    .additionalInfo.left .box:nth-child(3) {
+      font-weight: bold;
+      color: #de4585; }
+    .additionalInfo.left .box:nth-child(4) {
+      font-weight: bold;
+      color: #de4585; }
+
+#additionalLeft {
+  transition-duration: 400ms;
+  display: flex;
+  justify-content: flex-start; }
+
+#additionalRight {
+  transition-duration: 400ms;
+  display: flex;
+  justify-content: flex-end; }
+
+.reorder {
+  flex-direction: column; }

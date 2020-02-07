@@ -10,8 +10,8 @@
   <body>
     <div class="userStory">
       <h2>
-        "I want to see more information about each bond when analysing a bond
-        pair."
+        I want to see more information about each bond when analysing a bond
+        pair.
       </h2>
       <p>
         Users, when analysing a bonds pair, aren't able to see the relevant
@@ -346,11 +346,14 @@
               </h2>
             </div>
             <div class="" style="height: 8px; margin-left: 12px;"></div>
-            <h2 class="additionalInfo">
-              China · Financials · BB- · 3-5 years
-            </h2>
+            <div class="additionalInfo" id="additionalLeft">
+              <div class="box">China</div>
+              <div class="box">Financials</div>
+              <div class="box">BB-</div>
+              <div class="box">3-5 years</div>
+            </div>
           </div>
-          <div class="bookmark">
+          <div class="bookmark" id="bookmark">
             <div class="bookmarkInfo active" data-cy="bookmark">
               <div>
                 <div class="icon">
@@ -381,10 +384,15 @@
               </h2>
             </div>
             <div class="" style="height: 8px; margin-right: 12px"></div>
-            <h2 class="additionalInfo">China · Financials · B · 1-2 years</h2>
+            <div class="additionalInfo" id="additionalRight">
+              <div class="box">China</div>
+              <div class="box">Financials</div>
+              <div class="box">B</div>
+              <div class="box">1-2 years</div>
+            </div>
           </div>
         </div>
-        <div class="compareStats">
+        <div id="compareStuff" class="compareStats">
           <div>
             <label for="">Z-Score</label>
             <p>3.05</p>
@@ -515,7 +523,7 @@
         </ol>
       </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
