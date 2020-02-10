@@ -310,12 +310,12 @@ template {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  background-color: lightgray; }
+  background-color: lightgray;
+  width: 100%; }
 
 .content {
   display: flex;
   color: white;
-  width: 92%;
   margin: 2rem auto 4rem auto;
   border: 1px lightgray solid;
   overflow: hidden;
@@ -325,17 +325,18 @@ body {
   padding-right: 24px; }
 
 .header {
-  padding-top: 100px;
+  padding-top: 112px;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 24px; }
   .header h4 {
     margin: 0 0 4px 0;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.5); }
   .header h1 {
-    margin: 0 0 4px 0;
+    margin: 0;
     font-size: 1.5rem;
-    line-height: 1.2em; }
+    line-height: 2rem; }
   .header .additionalInfo {
     font-size: 1rem;
     font-weight: 400;
@@ -346,7 +347,8 @@ body {
     .header h4 {
       font-size: 1em; }
     .header h1 {
-      font-size: 2rem; }
+      font-size: 2.25rem;
+      line-height: 2.5rem; }
     .header .additionalInfo {
       font-size: 1em; } }
 
@@ -390,13 +392,32 @@ body {
 .left {
   text-align: left; }
 
+#additionalLeft {
+  transition-duration: 400ms;
+  display: flex;
+  justify-content: flex-start; }
+  #additionalLeft .box {
+    margin-right: 8px;
+    white-space: nowrap; }
+    #additionalLeft .box:nth-child(3) {
+      font-weight: bold;
+      color: #de4585 !important; }
+    #additionalLeft .box:nth-child(4) {
+      font-weight: bold;
+      color: #de4585; }
+
+#additionalRight {
+  transition-duration: 400ms;
+  display: flex;
+  justify-content: flex-end; }
+  #additionalRight .box {
+    margin-right: 8px;
+    white-space: nowrap; }
+
 .borderBottom {
   border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
   margin-bottom: 8px !important;
   padding-bottom: 8px; }
-
-.content.option3 .additionalInfo {
-  font-size: 15px; }
 
 .graphs {
   width: 100%;
@@ -410,7 +431,37 @@ body {
   color: pink; }
 
 nav {
-  min-width: 216px; }
+  min-width: 80px;
+  padding-top: 96px; }
+  @media (min-width: 880px) {
+    nav {
+      min-width: 216px; } }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5); }
+    nav ul li {
+      display: flex;
+      padding: 24px 16px; }
+      nav ul li .icon {
+        min-width: 24px;
+        min-height: 24px;
+        background-color: rgba(255, 255, 255, 0.5); }
+      nav ul li label {
+        margin-left: 16px;
+        display: none; }
+        @media (min-width: 880px) {
+          nav ul li label {
+            display: block; } }
+
+li.active {
+  color: white; }
+  li.active .icon {
+    background-color: white; }
 
 .userStory {
   padding: 1rem; }
@@ -426,10 +477,10 @@ nav {
 .compareStats {
   display: flex;
   justify-content: space-between;
-  padding: 16px 16px;
-  margin: 16px auto;
-  font-size: 15px;
-  max-width: 400px;
+  padding: 16px 24px;
+  margin: 0 auto 16px;
+  font-size: 1rem;
+  max-width: 440px;
   border: 1px rgba(255, 255, 255, 0.5) solid;
   border-radius: 4px; }
   .compareStats div {
@@ -437,7 +488,7 @@ nav {
     .compareStats div label {
       display: inline;
       color: rgba(255, 255, 255, 0.5);
-      margin-right: 4px;
+      margin-right: 8px;
       font-weight: 600; }
     .compareStats div p {
       margin: 0;
@@ -451,41 +502,14 @@ nav {
       font-size: 19px; }
 
 .box {
-  margin-right: 8px; }
+  margin-right: 8px;
+  white-space: nowrap; }
 
-.additionalInfo.right {
-  text-align: left;
-  padding-right: 50%;
-  align-items: flex-start; }
-  .additionalInfo.right .box {
-    margin: 0; }
-    .additionalInfo.right .box:nth-child(3) {
-      font-weight: bold; }
-    .additionalInfo.right .box:nth-child(4) {
-      font-weight: bold; }
-
-.additionalInfo.left {
-  padding-left: 50%;
-  align-items: flex-end;
-  text-align: right; }
-  .additionalInfo.left .box {
-    margin: 0; }
-    .additionalInfo.left .box:nth-child(3) {
-      font-weight: bold;
-      color: #de4585; }
-    .additionalInfo.left .box:nth-child(4) {
-      font-weight: bold;
-      color: #de4585; }
-
-#additionalLeft {
-  transition-duration: 400ms;
-  display: flex;
-  justify-content: flex-start; }
-
-#additionalRight {
-  transition-duration: 400ms;
-  display: flex;
-  justify-content: flex-end; }
-
-.reorder {
-  flex-direction: column; }
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  @media (min-width: 1280px) {
+    .sidebar {
+      position: relative;
+      width: 320px; } }
